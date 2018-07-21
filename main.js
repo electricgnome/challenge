@@ -48,3 +48,10 @@ function compare(a,b){
     
     return b;
   }
+
+
+
+		idRegex = /(#[^\#\s\+>~\.\[:]+)/g,
+    classRegex = /(\.[^\s\+>~\.\[:]+)/g,
+    
+    test = / ^/g
