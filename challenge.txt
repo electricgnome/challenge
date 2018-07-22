@@ -41,3 +41,31 @@ If all of above values are same, the winner is selector that appear last
 For example, let's represent the number of #id , .class, tagname selectors as array (in order from worst to best):
 
 Selector	Specificity (#id, .class, tagname)
+
+
+
+Expected: '.foo.bar',  '.x .y'
+Expected: '.red.apple',  '.red'
+Expected: '.box.box-first',  '.box'
+Expected: 'p.strong.cf6j8iobg8ve4gqfr div.center.violet',  '.cjfnzhs9qbqvqxs9k9 u.violet'
+Expected: '.white b.red.first',  'i .purple strong'
+Expected: 'ul.strong.white.green .center',  'span.cp46r7db89m6fmakbj4i span'
+Expected: 'ol.last.c0g6i6w5me9ljjhmpldi table.violet',  'a .violet .strong'
+Expected: 'div.purple.last.cx9y03hfm1j4uowyaatt9 div.black .strong',  'span.purple .purple div.center.orange'
+Expected: 'div.item.strong',  'p .center'
+Expected: '#dog div.strong.green.center.purple',  '.black #back .blue'
+Expected: 'div.black.white.last.orange',  '.center .yellow ul'
+'div.green.yellow.white.blue ul.first.blue a#bar p.violet.purple.last.cm73e653grqoqb4l8r529 div.green.center .purple div.cj6cfb0eco5j67xpqfr b.orange.orange.item ol#back span.blue.purple.orange b.yellow.black.c3to1c3idbyfrl01wcdi.yellow div#table table div#second span p .blue .strong',  '.item span#first p.purple.cxpko618ea6lsoe6ogvi.purple.item ol.orange div.first span#cat div i.blue.last span u.green i#list #fish div ol'
+'table.last.item.yellow .red .violet b.last.blue.blue.blue div.item.item .purple b#foo span#list div.cotiv7j2o5xtexxhia4i ul.white.first .orange div.red u.white.item.orange.purple a span.first.center.item',  'p#zvn8owwdam3einvzpvi #menu b p.blue .item p.orange.purple .blue .last ul.first.blue.orange .czjue97wtin3w6ei2j4i span.violet .ckoanewhqmytckutyb9 div table .white .center'
+
+compare(".red.apple", ".red");
+compare(".box.box-first", ".box");
+compare("p.strong.cf6j8iobg8ve4gqfr div.center.violet", ".cjfnzhs9qbqvqxs9k9 u.violet");
+
+compare('.white b.red.first',  'i .purple strong');
+compare('ul.strong.white.green .center',  'span.cp46r7db89m6fmakbj4i span');
+
+compare('div.purple.last.cx9y03hfm1j4uowyaatt9 div.black .strong',  'span.purple .purple div.center.orange');
+
+compare('div.green.yellow.white.blue ul.first.blue a#bar p.violet.purple.last.cm73e653grqoqb4l8r529 div.green.center .purple div.cj6cfb0eco5j67xpqfr b.orange.orange.item ol#back span.blue.purple.orange b.yellow.black.c3to1c3idbyfrl01wcdi.yellow div#table table div#second span p .blue .strong',  '.item span#first p.purple.cxpko618ea6lsoe6ogvi.purple.item ol.orange div.first span#cat div i.blue.last span u.green i#list #fish div ol')
+compare('table.last.item.yellow .red .violet b.last.blue.blue.blue div.item.item .purple b#foo span#list div.cotiv7j2o5xtexxhia4i ul.white.first .orange div.red u.white.item.orange.purple a span.first.center.item',  'p#zvn8owwdam3einvzpvi #menu b p.blue .item p.orange.purple .blue .last ul.first.blue.orange .czjue97wtin3w6ei2j4i span.violet .ckoanewhqmytckutyb9 div table .white .center')
